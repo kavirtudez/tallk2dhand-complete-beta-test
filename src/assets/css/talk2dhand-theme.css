@@ -1,0 +1,182 @@
+/* Talk2DHand styling for the ASL Translator app */
+
+/* Import Fredoka font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+/* Base styling for the entire app */
+body {
+    font-family: "Fredoka", sans-serif !important;
+    background-image: url('/assets/images/background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #304C89; /* Dark blue text color from Talk2DHand */
+}
+
+/* Override all font families throughout the app */
+* {
+    font-family: "Fredoka", sans-serif !important;
+}
+
+/* Talk2DHand blue for primary elements */
+:root {
+    --talk2dhand-primary: #1CB0F7;
+    --talk2dhand-primary-dark: #0073FF;
+    --talk2dhand-text: #304C89;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Translation card styling (overlay Talk2DHand styling) */
+#translation-card {
+    background-color: white;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 139, 0.2) !important;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Title styling like Talk2DHand */
+.ai-converse-title {
+    color: #1CB0F7;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 3%;
+    margin-top: 5px;
+}
+
+/* Override sign-output-container styling */
+.sign-output-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Override the sign output styling */
+.sign-output-container app-signed-language-output {
+    border-radius: 20px !important;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 139, 0.15) !important;
+}
+
+/* Text input container styling */
+.text-input-container {
+    background-color: white;
+    border-radius: 20px !important;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Styling for the spoken language label */
+#spoken-language-label {
+    color: #304C89;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Style textarea to match Talk2DHand */
+textarea, app-desktop-textarea, #desktop {
+    border-radius: 15px !important;
+    border: 2px solid #E6F0FA !important;
+    padding: 15px !important;
+    font-size: 18px !important;
+    color: #304C89 !important;
+    transition: all 0.3s ease !important;
+    background-color: #f8fcff !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 120px !important;
+}
+
+textarea:focus, app-desktop-textarea:focus, #desktop:focus {
+    border-color: #1CB0F7 !important;
+    box-shadow: 0 0 0 3px rgba(28, 176, 247, 0.2) !important;
+    outline: none !important;
+}
+
+/* Button styling to match Talk2DHand */
+button, ion-button {
+    border-radius: 1000px !important;
+    background: #1CB0F7 !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 8px 20px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+button:hover, ion-button:hover {
+    background: #0073FF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 115, 255, 0.4) !important;
+}
+
+/* Character count styling */
+#char-count {
+    color: #304C89 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Actions row styling */
+.actions-row {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile styling adaptations */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #translation-card {
+        border-radius: 15px !important;
+        padding: 15px;
+    }
+
+    button, ion-button {
+        font-size: 14px !important;
+        padding: 6px 15px !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: white !important;
+        color: #304C89 !important;
+    }
+
+    #translation-card,
+    .text-input-container {
+        background-color: white !important;
+    }
+
+    textarea, app-desktop-textarea {
+        background-color: #f8fcff !important;
+        color: #304C89 !important;
+    }
+} 

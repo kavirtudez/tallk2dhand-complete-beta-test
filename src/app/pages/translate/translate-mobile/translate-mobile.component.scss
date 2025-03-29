@@ -1,0 +1,85 @@
+.sign-output-container {
+  width: 100%;
+  height: calc(100% - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+// Talk2DHand logo and title styling
+.talk2dhand-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.logo-image {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+// AI Converse title
+.ai-converse-title {
+  color: #00008B;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+// Add "New!" badge to AI Converse title
+.ai-converse-title::after {
+  content: "New!";
+  position: absolute;
+  top: -8px;
+  margin-left: 8px;
+  background: #FF4081;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 20px;
+}
+
+app-signed-language-output {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-input-container {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+ion-footer {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+ion-content {
+  --background: white;
+}
+
+// Media queries for smaller screens
+@media (max-width: 480px) {
+  .logo-image {
+    width: 150px;
+  }
+  
+  .ai-converse-title {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+}

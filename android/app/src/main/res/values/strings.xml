@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+    <string name="app_name">sign</string>
+    <string name="title_activity_main">ai-converse</string>
+    <string name="package_name">ai.converse.translate</string>
+    <string name="custom_url_scheme">ai.converse.translate</string>
+</resources>

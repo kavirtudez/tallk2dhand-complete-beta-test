@@ -1,0 +1,9 @@
+<div class="translation-text">
+  <label id="spoken-language-label">Enter text to translate to ASL</label>
+  <app-desktop-textarea dir="auto" [textControl]="text" [maxLength]="maxTextLength" [lang]="'en'" />
+  <div class="actions-row">
+    <app-speech-to-text [lang]="'en'" (changeText)="text.setValue($event)"></app-speech-to-text>
+    <app-text-to-speech [lang]="'en'" [text]="text.value"></app-text-to-speech>
+    <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
+  </div>
+</div>

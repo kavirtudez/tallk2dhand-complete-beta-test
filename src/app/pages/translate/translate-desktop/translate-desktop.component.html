@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <!-- Talk2DHand logo and title -->
+    <div class="talk2dhand-header">
+      <img src="assets/images/logo_text.png" alt="Talk2DHand Logo" class="logo-image">
+    </div>
+    
+    <!-- AI Converse label -->
+    <h2 class="ai-converse-title">AI Converse</h2>
+    
+    <div id="translation-card">
+      <div id="content">
+        <div class="sign-output-container">
+          <!-- Sign language output container -->
+          <app-signed-language-output />
+        </div>
+        
+        <div class="text-input-container">
+          <!-- Text input container -->
+          <app-spoken-language-input />
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
